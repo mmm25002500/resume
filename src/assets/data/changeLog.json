@@ -1,0 +1,9 @@
+[
+    {
+        "version": "1.0.0",
+        "description": "建構專案",
+        "content": [
+            "建立 Vue Cli + Vite 專案"
+        ]
+    }
+]
