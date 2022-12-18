@@ -1,0 +1,26 @@
+[
+    {
+        "version": "1.1",
+        "description": "建構專案",
+        "date": "2022/12/18",
+        "content": [
+            "新增 vue-router",
+            "新增 tailwind",
+            "刪除原有 css",
+            "新增 Footer",
+            "新增 router-link",
+            "新增 網站設定",
+            "新增 夜間模式",
+            "新增 Navbar",
+            "新增多國語系"
+        ]
+    },
+    {
+        "version": "1.0.0",
+        "description": "建構專案",
+        "date": "2022/12/17",
+        "content": [
+            "建立 Vue Cli + Vite 專案"
+        ]
+    }
+]
