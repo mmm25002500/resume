@@ -19,6 +19,11 @@ const routes = [
     component: () => import('../views/SettingPage.vue')
   },
   {
+    path: '/changes',
+    name: '更新日誌',
+    component: () => import('../views/ChangeLog.vue')
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'ERR 404 找不到頁面ㄛ',
     component: () => import('../views/NotFound.vue')
@@ -28,7 +33,7 @@ const routes = [
 // 執行路由表
 const router = createRouter({
   history: createWebHistory(),
-  scrollBehavior (to, from, savedPosition) {
+  scrollBehavior(to, from, savedPosition) {
     return { left: 0, top: 0 }
   },
   routes

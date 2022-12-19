@@ -1,8 +1,8 @@
 {
     "Navbar": {
-        "HomePage": "主頁",
+        "HomePage": "主页",
         "Works": "作品集",
-        "Settings": "設定"
+        "Settings": "设置"
     },
     "HomePage": {
         "name": "夏特稀",
@@ -10,13 +10,13 @@
         "short": "TSX",
         "description": "我是大帥哥喔，夏特稀真的很帥很帥。我是大帥哥喔，夏特稀真的很帥很帥。我是大帥哥喔，夏特稀真的很帥很帥。我是大帥哥喔，夏特稀真的很帥很帥。我是大帥哥喔，夏特稀真的很帥很帥。我是大帥哥喔，夏特稀真的很帥很帥。我是大帥哥喔，夏特稀真的很帥很帥。我是大帥哥喔，夏特稀真的很帥很帥。",
         "info": {
-            "position": "全端工程師",
-            "location": "中華民國臺灣省臺中市"
+            "position": "全端程序员",
+            "location": "中华民国台湾省台中市"
         },
         "skill": {
             "title": "技能",
             "frontend": "前端",
-            "backend": "後端",
+            "backend": "后端",
             "others": "其他"
         }
     },
@@ -27,20 +27,20 @@
         "title": "更新日誌"
     },
     "Settings": {
-        "title": "設定",
+        "title": "设置",
         "ChangeLog": {
-            "title": "更新日誌",
-            "description": "你可以從這裡查看我網站的更新日誌。"
+            "title": "更新日志",
+            "description": "你可以从这里查看我网站的更新日志。"
         },
         "Themes": {
-            "title": "主題",
-            "description": "你可以從這裡選擇你喜歡的主題來作為我的網站的主要色調。",
+            "title": "主题",
+            "description": "你可以从这里选择你喜欢的主题来作为我的网站的主要色调。",
             "light": "亮色模式",
             "dark": "暗色模式"
         },
         "language": {
-            "title": "語言",
-            "description": "你可以從這裡選擇你喜歡的語言來作為我的網站的語言。"
+            "title": "语言",
+            "description": "你可以从这里选择你喜欢的语言来作为我的网站的语言。"
         }
     },
     "Footer": {

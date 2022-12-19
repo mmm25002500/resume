@@ -1,3 +1,7 @@
+/* eslint-disable no-undef */
+/* eslint-disable quote-props */
+/* eslint-disable camelcase */
+/* eslint-disable new-cap */
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
@@ -5,8 +9,9 @@ import router from './routers'
 
 // 引入 Vue I18n
 import { createI18n } from 'vue-i18n'
-import zh_TW from './i18n/zh_TW'      // 存放中文語系檔
-import en_US from './i18n/en_US'      // 存放英文語系檔
+import zh_TW from './i18n/zh_TW' // 存放正體語系檔
+import zh_CN from './i18n/zh_CN' // 存放簡體中文語系檔
+import en_US from './i18n/en_US' // 存放英文語系檔
 
 // 匯入 font awesome
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -17,17 +22,17 @@ import { far } from '@fortawesome/free-regular-svg-icons'
 
 library.add(fas, fab, far)
 
-
 // 建立多國語系
 const i18n = new createI18n({
   legacy: false,
-  locale: localStorage.getItem("locale") ?? "繁體中文",
-  fallbackLocale: '繁體中文',
+  locale: localStorage.getItem('locale') ?? '正體中文',
+  fallbackLocale: '正體中文',
   messages: {
-    '繁體中文': zh_TW,
+    '正體中文': zh_TW,
+    '简体中文': zh_CN,
     'English': en_US
   }
-});
+})
 
 const app = createApp(App)
 app.use(router)

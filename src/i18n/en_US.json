@@ -1,9 +1,49 @@
 {
-    "夏特稀": "MIS 腳印",
     "Navbar": {
         "HomePage": "HomePage",
-        "Works": "Works",
+        "Works": "Side Project",
         "Settings": "Settings"
     },
-    "description": ""
+    "HomePage": {
+        "name": "",
+        "id": "TershiXia",
+        "short": "TSX",
+        "description": "I am so handsome. TershiXia is really really handsome. I am so handsome. TershiXia is really really handsome. I am so handsome. TershiXia is really really handsome.I am so handsome. TershiXia is really really handsome.I am so handsome. TershiXia is really really handsome.I am so handsome. TershiXia is really really handsome.I am so handsome. TershiXia is really really handsome.I am so handsome. TershiXia is really really handsome.I am so handsome. TershiXia is really really handsome.I am so handsome. TershiXia is really really handsome.",
+        "info": {
+            "position": "Full-Stack Engineer",
+            "location": "Taichung, Taiwan(Republic Of China)"
+        },
+        "skill": {
+            "title": "Skills",
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "others": "Others"
+        }
+    },
+    "WorkPage": {
+        "title": "Side Project"
+    },
+    "ChangeLog": {
+        "title": "Change Log"
+    },
+    "Settings": {
+        "title": "Settings",
+        "ChangeLog": {
+            "title": "Change Log",
+            "description": "You can see updates in here"
+        },
+        "Themes": {
+            "title": "Themes",
+            "description": "You can choose a theme for my website.",
+            "light": "Light Mode",
+            "dark": "Dark Mode"
+        },
+        "language": {
+            "title": "Language",
+            "description": "You can choose a language for my website."
+        }
+    },
+    "Footer": {
+        "sitename": "TershiXia"
+    }
 }
