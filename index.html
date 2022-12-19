@@ -5,10 +5,21 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>履歷表</title>
-    <script type="module" crossorigin src="/assets/index-1678fbc6.js"></script>
-    <link rel="stylesheet" href="/assets/index-4c2c675f.css">
+    <script type="module" crossorigin src="/assets/index-65e5e849.js"></script>
+    <link rel="stylesheet" href="/assets/index-43316c74.css">
   </head>
-  <body>
+  <body class="m-0 p-0 bg-white dark:bg-gray-900 transition-colors duration-100">
+    <!-- Github Page 到 / 以外就會回傳 404，將 sessionStorage.redirect 取出來 -->
+	<script>
+    (function(){
+      let redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect !== location.href) {
+      history.replaceState(null, null, redirect);
+      }
+    })();
+    </script>
+    
     <div id="app"></div>
     
   </body>

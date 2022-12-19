@@ -1,1 +1,0 @@
-import{_ as e,c as o,o as s,a as t}from"./index-1678fbc6.js";const c={},a=t("h1",null,"作品集",-1),n=[a];function r(_,d,l,p,i,f){return s(),o("div",null,n)}const h=e(c,[["render",r]]);export{h as default};
