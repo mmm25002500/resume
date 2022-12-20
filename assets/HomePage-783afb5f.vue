@@ -13,10 +13,28 @@
       <h1 class="text-4xl inline">{{ t('HomePage.name') }} {{ t('HomePage.id') }}</h1>
       <p class="inline text-sm text-gray-400 pl-1"> {{ t('HomePage.short') }}</p>
       <p class="pt-2">{{ t('HomePage.description') }}</p>
-      <a :href="SITE_CONFIG.social.facebook"><font-awesome-icon class="text-xl pt-4 pr-3" :icon="['fab', 'facebook']" /></a>
-      <a :href="SITE_CONFIG.social.github"><font-awesome-icon class="text-xl pt-4 pr-3" :icon="['fab', 'github']" /></a>
-      <a :href="SITE_CONFIG.social.instagram"><font-awesome-icon class="text-xl pt-4 pr-3" :icon="['fab', 'instagram']" /></a>
-      <a :href="SITE_CONFIG.social.twitter"><font-awesome-icon class="text-xl pt-4 pr-3" :icon="['fab', 'twitter']" /></a>
+      <div class="pt-4">
+        <span class="pr-3">
+          <a :href="SITE_CONFIG.social.facebook">
+            <font-awesome-icon class="text-xl" :icon="['fab', 'facebook']" />
+          </a>
+        </span>
+        <span class="pr-3">
+          <a :href="SITE_CONFIG.social.github">
+            <font-awesome-icon class="text-xl" :icon="['fab', 'github']" />
+          </a>
+        </span>
+        <span class="pr-3">
+          <a :href="SITE_CONFIG.social.instagram">
+            <font-awesome-icon class="text-xl" :icon="['fab', 'instagram']" />
+          </a>
+        </span>
+        <span class="pr-3">
+          <a :href="SITE_CONFIG.social.twitter">
+            <font-awesome-icon class="text-xl" :icon="['fab', 'twitter']" />
+          </a>
+        </span>
+      </div>
 
       <!-- position -->
       <div class="pt-4">
@@ -54,12 +72,12 @@
       <h3 class="text-3xl text-cyan-300">{{ t('HomePage.skill.frontend')}}</h3>
       <ul class="list-disc list-inside pl-5">
         <li>Vue.JS</li>
+        <li>React</li>
         <li>Tailwind CSS 3.0</li>
         <li>Bootstrap 5</li>
         <li>Animation.css</li>
         <li>會使用 axios 串接 API</li>
         <li>了解 JFrame</li>
-        <li>新增中...</li>
       </ul>
     </div>
     <div class="col-span-full sm:col-span-1">
@@ -68,10 +86,10 @@
       <ul class="list-disc list-inside pl-5">
         <li>Python Django</li>
         <li>Python Flask</li>
+        <li>Node.JS</li>
         <li>使用 Java Spring Boot</li>
         <li>使用 php 開發網頁</li>
         <li>會使用 MySQL</li>
-        <li>新增中...</li>
         <li>新增中...</li>
       </ul>
     </div>
@@ -80,11 +98,11 @@
       <h3 class="text-3xl text-cyan-300">{{ t('HomePage.skill.others')}}</h3>
       <ul class="list-disc list-inside pl-5">
         <li>了解 Linux 作業系統</li>
-        <li>新增中...</li>
-        <li>新增中...</li>
-        <li>新增中...</li>
-        <li>新增中...</li>
-        <li>新增中...</li>
+        <li>了解 Bash</li>
+        <li>熟悉 Apache2</li>
+        <li>Android Java App 開發</li>
+        <li>Photoshop & Illustrator</li>
+        <li>Premiere & After Effects</li>
         <li>新增中...</li>
       </ul>
     </div>
@@ -97,7 +115,7 @@
     </div>
   </div> -->
 
-  <div class="grid grid-cols-3 gap-4 pt-3">
+  <!-- <div class="grid grid-cols-3 gap-4 pt-3">
     <div class="col-span-3">
       單欄
     </div>
@@ -110,11 +128,11 @@
     <div class="col-span-full sm:col-span-1">
       作品
     </div>
-  </div>
+  </div> -->
 
-  <br>
+  <!-- <br>
   <h2 class="inline">正在開發中...</h2>
-  <h3 class="text-cyan-500 inline">前往<a href="https://tershi.com">夏特稀網站</a></h3>
+  <h3 class="text-cyan-500 inline">前往<a href="https://tershi.com">夏特稀網站</a></h3> -->
 </template>
 
 <script>
@@ -136,7 +154,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>
