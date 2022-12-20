@@ -4,7 +4,15 @@
         "description": "建構專案",
         "date": "2022/12/20",
         "content": [
-            "完善 index.html"
+            "完善 index.html",
+            "完善作品集",
+            "功能: 新增作品集卡片圖片條件",
+            "將 navbar style 改為 tailwind",
+            "新增搜尋功能",
+            "修復主頁社交連結空格會有連結部分",
+            "修復設定頁面會有陰影部分",
+            "刪除多餘的 style 區塊",
+            "Footer Copyright padding 調整"
         ]
     },
     {

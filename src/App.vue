@@ -2,7 +2,7 @@
 <template>
   <div class="container mx-auto pt-8 pl-5 pr-5 text-black dark:text-white transition-colors duration-100">
     <!-- navbar -->
-    <nav>
+    <nav class="text-sm inline-block">
       <!-- left router link -->
       <div class="inline-block" v-for="(item, key) in nav_router" :key="key">
         <router-link
@@ -140,12 +140,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-nav {
-  font-size: 14px;
-  display: inline-block;
-}
-
-</style>

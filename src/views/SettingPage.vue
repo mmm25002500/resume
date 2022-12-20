@@ -4,7 +4,7 @@
     <hr class="pb-3">
 
     <!-- 更新日誌 -->
-    <div class="rounded-md shadow-sm pb-3">
+    <div class="rounded-md pb-3">
       <label class="mb-2 text-sm font-medium text-gray-900 dark:text-white align-middle">{{ t('Settings.ChangeLog.title') }}: </label>
       <button @click="$router.push('/changes')" type="button" class=" disabled:text-cyan-400 disabled:disabled:text-cyan-400 inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white disabled:dark:bg-gray-200 disabled:bg-gray-200 rounded-l-md rounded-r-md border border-gray-200 hover:bg-gray-100  hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
         <font-awesome-icon :icon="['fas', 'list']" class="pr-1" />
@@ -14,7 +14,7 @@
     </div>
 
     <!-- Themes -->
-    <div class="rounded-md shadow-sm pb-3" role="group">
+    <div class="rounded-md pb-3" role="group">
       <label class="mb-2 text-sm font-medium text-gray-900 dark:text-white align-middle">{{ t('Settings.Themes.title') }}: </label>
       <button @click="darkMode = true" :disabled="darkMode" type="button" class="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-l-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 disabled:dark:bg-gray-800 disabled:bg-gray-800 dark:border-gray-600 disabled:text-cyan-400 disabled:disabled:text-cyan-400 dark:text-white  dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
         <font-awesome-icon :icon="['fas', 'moon']" class="pr-1" />
@@ -84,6 +84,3 @@ export default {
   }
 }
 </script>
-<style>
-
-</style>

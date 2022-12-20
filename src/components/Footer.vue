@@ -3,7 +3,7 @@
   <div>
     <br>
     <hr>
-    <p class="text-black dark:text-white text-center font-bold">
+    <p class="text-black dark:text-white text-center font-bold pt-1 pb-1">
       &copy; {{ t('Footer.sitename') }} 2022
     </p>
   </div>
@@ -20,6 +20,3 @@ export default {
   }
 }
 </script>
-<style>
-
-</style>
