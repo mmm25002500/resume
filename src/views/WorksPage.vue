@@ -1,32 +1,31 @@
 <template>
   <div>
     <h1 class="text-3xl inline-block">{{ t('WorkPage.title')}}</h1>
-    <button class="text-3xl float-right" @click="navbarOpen = !navbarOpen">
+    <button class="text-3xl float-right" @click="toggleNavbar()">
       <font-awesome-icon :icon="['fas', 'magnifying-glass']" />
     </button>
 
     <hr class="pb-5">
 
     <!-- 搜尋框 -->
-    <form v-if="navbarOpen" class="mb-5">
+    <form class="mb-5 " :class="navbarOpen? '': 'hidden'">
       <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">搜尋</label>
       <div class="relative">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
           <font-awesome-icon :icon="['fas', 'magnifying-glass']" class="w-5 h-5 text-gray-500 dark:text-gray-400" />
-          <!-- <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> -->
         </div>
-        <input type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="搜尋專案吧" required>
-        <!-- <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button> -->
+        <input ref="search_bar" v-model="cacheSearch" type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="搜尋專案吧" required>
       </div>
     </form>
 
     <!-- 作品卡片 -->
     <div class="grid grid-cols-3 gap-4">
       <Card
-        v-for="(item, key) in data"
+        v-for="(item, key) in searchData"
         :key="key"
         :intro="item.intro"
         :description="item.description"
+        :code="item.code"
         :link="item.link"
         :func="item.func"
         :img1="item.img1"
@@ -53,11 +52,14 @@ export default {
   data() {
     return {
       navbarOpen: false,
+      cacheSearch: '',
+      searchData: [],
       data: [
         {
           intro: 'Cutespirit Discord Bot',
           description: '一個由靈萌團隊製作的 DISCORD 機器人，具有各種功能集合，在聊天時更能化解尷尬，將伺服器管理變得更容易。使用模組化進行開發，具有指令幫助功能，讓下指令變得更簡單、更直覺。擁抱開源，熱愛程式。',
-          link: 'https://tershi.com',
+          code: 'https://github.com/Cutespirit-Team/CutespiritDiscordBot',
+          link: 'https://dcbot.tershi.com',
           func: [
             '使用 Python 開發',
             '可查找 ArchLinux 套件',
@@ -74,7 +76,8 @@ export default {
         {
           intro: '全國高中生告白網站',
           description: '作品二描述',
-          link: 'https://tershi.com',
+          code: 'https://github.com/Cutespirit-Team/saylove',
+          link: 'https://github.com/Cutespirit-Team/saylove',
           func: [
             '功能一',
             '功能二',
@@ -86,7 +89,8 @@ export default {
         {
           intro: '中科大課表查詢',
           description: '作品三描述',
-          link: 'https://tershi.com',
+          code: 'https://github.com/mmm25002500/Nutc-class-timetable',
+          link: 'https://nutc.tershi.com',
           func: [
             '功能一',
             '功能二',
@@ -97,6 +101,36 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    toggleNavbar() {
+      this.navbarOpen = !this.navbarOpen
+      // document.getElementById('default-search').focus()
+      // if (this.navbarOpen) {
+      //   this.$refs.search_bar.focus()
+      //   console.log(this.$refs)
+      // }
+    }
+  },
+  watch: {
+    cacheSearch() {
+      this.searchData = this.data.filter((item) => {
+        if (String(item.intro).toUpperCase().includes(this.cacheSearch.toUpperCase())) {
+          return item.intro.toUpperCase().includes(this.cacheSearch.toUpperCase())
+        } else if (String(item.description).toUpperCase().includes(this.cacheSearch.toUpperCase())) {
+          return item.description.toUpperCase().includes(this.cacheSearch.toUpperCase())
+        } else {
+          return false
+        }
+      })
+    }
+  },
+  created() {
+    this.searchData = this.data
+  },
+  mounted() {
+    // when page is loaded
+    this.$Progress.finish()
   }
 }
 </script>

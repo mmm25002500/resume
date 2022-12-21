@@ -81,6 +81,10 @@ export default {
     } else {
       this.darkMode = false
     }
+  },
+  mounted() {
+    // when page is loaded
+    this.$Progress.finish()
   }
 }
 </script>

@@ -14,14 +14,48 @@
             "location": "Taichung, Taiwan(Republic Of China)"
         },
         "skill": {
-            "title": "Skills",
-            "frontend": "Frontend",
-            "backend": "Backend",
-            "others": "Others"
+            "title": "技能",
+            "frontend": {
+                "title": "Frontend",
+                "value": [
+                    "Vue.JS",
+                    "React",
+                    "Tailwind CSS 3.0",
+                    "Bootstrap 5",
+                    "Animation.css",
+                    "Use axios toc oncatenation API",
+                    "Understand JFrame"
+                ]
+            },
+            "backend": {
+                "title": "Backend",
+                "value": [
+                    "Python Django",
+                    "Python Flask",
+                    "Node.JS",
+                    "Use Java Spring Boot",
+                    "Use php to dev web",
+                    "Use MySQL",
+                    "新增中..."
+                ]
+            },
+            "others": {
+                "title": "Others",
+                "value": [
+                "Understand Linux Operating System",
+                "Understand Bash",
+                "Know all about Apache2",
+                "Android Java App Dev",
+                "Photoshop & Illustrator",
+                "Premiere & After Effects",
+                "新增中..."
+                ]
+            }
         }
     },
     "WorkPage": {
-        "title": "Side Project"
+        "title": "Side Project",
+        "link": "Link"
     },
     "ChangeLog": {
         "title": "Change Log"

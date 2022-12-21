@@ -8,6 +8,14 @@
 </template>
 <script>
 export default {
+  data() {
+    return {
 
+    }
+  },
+  mounted() {
+    // when page is loaded
+    this.$Progress.finish()
+  }
 }
 </script>

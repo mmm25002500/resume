@@ -15,13 +15,47 @@
         },
         "skill": {
             "title": "技能",
-            "frontend": "前端",
-            "backend": "後端",
-            "others": "其他"
+            "frontend": {
+                "title": "前端",
+                "value": [
+                    "Vue.JS",
+                    "React",
+                    "Tailwind CSS 3.0",
+                    "Bootstrap 5",
+                    "Animation.css",
+                    "會使用 axios 串接 API",
+                    "了解 JFrame"
+                ]
+            },
+            "backend": {
+                "title": "後端",
+                "value": [
+                    "Python Django",
+                    "Python Flask",
+                    "Node.JS",
+                    "使用 Java Spring Boot",
+                    "使用 php 開發網頁",
+                    "會使用 MySQL",
+                    "新增中..."
+                ]
+            },
+            "others": {
+                "title": "後端",
+                "value": [
+                "了解 Linux 作業系統",
+                "了解 Bash",
+                "熟悉 Apache2",
+                "Android Java App 開發",
+                "Photoshop & Illustrator",
+                "Premiere & After Effects",
+                "新增中..."
+                ]
+            }
         }
     },
     "WorkPage": {
-        "title": "作品集"
+        "title": "作品集",
+        "link": "連結"
     },
     "ChangeLog": {
         "title": "更新日誌"

@@ -1,0 +1,64 @@
+{
+    "Navbar": {
+        "HomePage": "",
+        "Works": "",
+        "Settings": ""
+    },
+    "HomePage": {
+        "name": "",
+        "id": "",
+        "short": "",
+        "description": "",
+        "info": {
+            "position": "",
+            "location": ""
+        },
+        "skill": {
+            "title": "",
+            "frontend": {
+                "title": "",
+                "value": [
+                    ""
+                ]
+            },
+            "backend": {
+                "title": "",
+                "value": [
+                    ""
+                ]
+            },
+            "others": {
+                "title": "",
+                "value": [
+                    ""
+                ]
+            }
+        }
+    },
+    "WorkPage": {
+        "title": ""
+    },
+    "ChangeLog": {
+        "title": ""
+    },
+    "Settings": {
+        "title": "",
+        "ChangeLog": {
+            "title": "",
+            "description": ""
+        },
+        "Themes": {
+            "title": "",
+            "description": "",
+            "light": "",
+            "dark": ""
+        },
+        "language": {
+            "title": "",
+            "description": ""
+        }
+    },
+    "Footer": {
+        "sitename": ""
+    }
+}

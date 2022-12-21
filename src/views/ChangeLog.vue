@@ -26,6 +26,10 @@ export default {
     return {
       log
     }
+  },
+  mounted() {
+    // when page is loaded
+    this.$Progress.finish()
   }
 }
 </script>

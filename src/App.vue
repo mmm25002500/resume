@@ -6,7 +6,8 @@
       <!-- left router link -->
       <div class="inline-block" v-for="(item, key) in nav_router" :key="key">
         <router-link
-          :to="item.path">
+          :to="item.path"
+          >
           {{ t(`Navbar.${item.name}`) }}
         </router-link>
         <p class="inline" v-if="key != nav_router.length - 1">｜</p>
@@ -46,7 +47,11 @@
 
     <!-- view -->
     <section class="mt-5">
+      <!-- <button @click="increase(20)">increce</button>
+      <button @click="fail()">failed</button>
+      <button @click="finish()">finish</button> -->
       <router-view></router-view>
+      <vue-progress-bar></vue-progress-bar>
     </section>
 
     <!-- Footer Copyright -->
@@ -117,6 +122,37 @@ export default {
     toggleDarkMode() {
       this.darkMode = !this.darkMode
       localStorage.setItem('darkMode', this.darkMode)
+    },
+
+    // progress bar
+    start() {
+      this.$Progress.start()
+    },
+    set(num) {
+      this.$Progress.set(num)
+    },
+    increase(num) {
+      this.$Progress.increase(num)
+    },
+    decrease(num) {
+      this.$Progress.decrease(num)
+    },
+    finish() {
+      this.$Progress.finish()
+    },
+    fail() {
+      this.$Progress.fail()
+    },
+    test() {
+      // test func
+      this.$Progress.start()
+
+      this.$http.jsonp('http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=7waqfqbprs7pajbz28mqf6vz')
+        .then((response) => {
+          this.$Progress.finish()
+        }, (response) => {
+          this.$Progress.fail()
+        })
     }
   },
   watch: {
@@ -131,12 +167,37 @@ export default {
       localStorage.setItem('locale', val)
     }
   },
+  mounted() {
+    //  [App.vue specific] When App.vue is finish loading finish the progress bar
+    this.$Progress.finish()
+  },
   created() {
     if (localStorage.darkMode === 'true') {
       this.darkMode = true
     } else {
       this.darkMode = false
     }
+
+    // progress bar of starting
+    this.$Progress.start()
+    //  hook the progress bar to start before we move router-view
+    this.$router.beforeEach((to, from, next) => {
+      //  does the page we want to go to have a meta.progress object
+      if (to.meta.progress !== undefined) {
+        const meta = to.meta.progress
+        // parse meta tags
+        this.$Progress.parseMeta(meta)
+      }
+      //  start the progress bar
+      this.$Progress.start()
+      //  continue to next page
+      next()
+    })
+    //  hook the progress bar to finish after we've finished moving router-view
+    this.$router.afterEach((to, from) => {
+      //  finish the progress bar
+      this.$Progress.finish()
+    })
   }
 }
 </script>
