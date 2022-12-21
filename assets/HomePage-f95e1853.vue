@@ -1,5 +1,4 @@
 <template>
-
   <!-- 簡介、自介、圖片 -->
   <div class="grid grid-cols-3 gap-4 pb-5">
 
@@ -69,41 +68,32 @@
   <div class="grid grid-cols-3 gap-4 pt-3 pb-6">
     <div class="col-span-full sm:col-span-1">
       <hr class="pb-5">
-      <h3 class="text-3xl text-cyan-300">{{ t('HomePage.skill.frontend')}}</h3>
+      <h3 class="text-3xl text-cyan-300">{{ t('HomePage.skill.frontend.title')}}</h3>
       <ul class="list-disc list-inside pl-5">
-        <li>Vue.JS</li>
-        <li>React</li>
-        <li>Tailwind CSS 3.0</li>
-        <li>Bootstrap 5</li>
-        <li>Animation.css</li>
-        <li>會使用 axios 串接 API</li>
-        <li>了解 JFrame</li>
+        <li v-for="(item, key) in messages[locale].HomePage.skill.frontend.value" :key="key">
+          {{ item }}
+        </li>
       </ul>
     </div>
     <div class="col-span-full sm:col-span-1">
       <hr class="pb-5">
-      <h3 class="text-3xl text-cyan-300">{{ t('HomePage.skill.backend')}}</h3>
+      <h3 class="text-3xl text-cyan-300">{{ t('HomePage.skill.backend.title')}}</h3>
       <ul class="list-disc list-inside pl-5">
-        <li>Python Django</li>
-        <li>Python Flask</li>
-        <li>Node.JS</li>
-        <li>使用 Java Spring Boot</li>
-        <li>使用 php 開發網頁</li>
-        <li>會使用 MySQL</li>
-        <li>新增中...</li>
+        <!-- {{ t('HomePage.skill.frontend') }} -->
+        <!-- {{ lang.messages._value.English.HomePage.skill }} -->
+        <!-- {{ Object.keys(lang.messages._value.English) }} -->
+        <li v-for="(item, key) in messages[locale].HomePage.skill.backend.value" :key="key">
+          {{ item }}
+        </li>
       </ul>
     </div>
     <div class="col-span-full sm:col-span-1">
       <hr class="pb-5">
-      <h3 class="text-3xl text-cyan-300">{{ t('HomePage.skill.others')}}</h3>
+      <h3 class="text-3xl text-cyan-300">{{ t('HomePage.skill.others.title')}}</h3>
       <ul class="list-disc list-inside pl-5">
-        <li>了解 Linux 作業系統</li>
-        <li>了解 Bash</li>
-        <li>熟悉 Apache2</li>
-        <li>Android Java App 開發</li>
-        <li>Photoshop & Illustrator</li>
-        <li>Premiere & After Effects</li>
-        <li>新增中...</li>
+        <li v-for="(item, key) in messages[locale].HomePage.skill.others.value" :key="key">
+          {{ item }}
+        </li>
       </ul>
     </div>
   </div>
@@ -142,15 +132,25 @@ import SITECFG from '@/config/SITECFG.json'
 export default {
   setup() {
     const { t, locale } = useI18n()
+    const lang = useI18n()
     return {
       t,
-      locale
+      locale,
+      lang
     }
   },
   data() {
     return {
-      SITE_CONFIG: SITECFG
+      SITE_CONFIG: SITECFG,
+      messages: this.lang.messages
     }
+  },
+  methods: {
+
+  },
+  mounted() {
+    // when page is loaded
+    this.$Progress.finish()
   }
 }
 </script>
