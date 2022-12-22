@@ -59,16 +59,16 @@ const app = createApp(App)
 app.use(router)
 
 // 自動標題(會從 router 裡面的 title 去抓)
-router.afterEach((to, from) => {
-  nextTick(() => {
-    if (to.name) {
-      // 帽似是 to.title
-      document.title = to.name
-    } else {
-      document.title = 'This is Shark NFT'
-    }
-  })
-})
+// router.afterEach((to, from) => {
+//   nextTick(() => {
+//     if (to.name) {
+//       // 帽似是 to.title
+//       document.title = to.name
+//     } else {
+//       document.title = 'This is Shark NFT'
+//     }
+//   })
+// })
 
 // 載入 font awesome
 app.component('font-awesome-icon', FontAwesomeIcon)

@@ -50,7 +50,10 @@
       <!-- <button @click="increase(20)">increce</button>
       <button @click="fail()">failed</button>
       <button @click="finish()">finish</button> -->
+
+    <!-- <transition name="fade" appear @before-enter="beforeEnter" @enter="enter"> -->
       <router-view></router-view>
+    <!-- </transition> -->
       <vue-progress-bar></vue-progress-bar>
     </section>
 
