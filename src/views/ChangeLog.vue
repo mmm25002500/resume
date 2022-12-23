@@ -18,7 +18,7 @@
       }">
       <ul
         v-for="(item, key) in log"
-        :key="key"
+        :key="item.version"
         :data-index="key"
         class="list-disc list-inside pb-5"
       >

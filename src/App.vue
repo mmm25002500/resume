@@ -51,9 +51,20 @@
       <button @click="fail()">failed</button>
       <button @click="finish()">finish</button> -->
 
-    <!-- <transition name="fade" appear @before-enter="beforeEnter" @enter="enter"> -->
-      <router-view></router-view>
-    <!-- </transition> -->
+      <router-view v-slot="{ Component }">
+        <transition appear
+          @leave="
+            (el, done) => {
+              gsap.to(el, {
+                opacity: 0,
+                duration: 0.5,
+                onComplete: done
+              })
+            }">
+          <component :is="Component" />
+        </transition>
+      </router-view>
+
       <vue-progress-bar></vue-progress-bar>
     </section>
 
@@ -66,6 +77,7 @@
 import Footer from './components/Footer.vue'
 import SITECFG from './config/SITECFG.json'
 import { useI18n } from 'vue-i18n'
+import GSAP from 'gsap'
 
 export default {
   name: 'App',
@@ -86,6 +98,7 @@ export default {
     return {
       SITE_CONFIG: SITECFG,
       darkMode: false,
+      gsap: GSAP,
       nav_router: [
         {
           name: 'HomePage',
@@ -185,6 +198,9 @@ export default {
     this.$Progress.start()
     //  hook the progress bar to start before we move router-view
     this.$router.beforeEach((to, from, next) => {
+      // 自動標題(會從 router 裡面的 title 去抓)
+      document.title = '夏特稀履歷表 | ' + to.name
+      // next()
       //  does the page we want to go to have a meta.progress object
       if (to.meta.progress !== undefined) {
         const meta = to.meta.progress

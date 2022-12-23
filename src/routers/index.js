@@ -40,9 +40,9 @@ const router = createRouter({
 })
 
 // 將 name 自動賦予至 head 中的 title
-router.beforeEach((to, from, next) => {
-  document.title = '夏特稀 | ' + to.name
-  next()
-})
+// router.beforeEach((to, from, next) => {
+//   document.title = '夏特稀履歷表 | ' + to.name
+//   next()
+// })
 
 export default router

@@ -1,5 +1,23 @@
 [
     {
+        "version": "1.6",
+        "description": "建構專案",
+        "date": "2022/12/23",
+        "content": [
+            "主頁新增 short",
+            "完善 index.html",
+            "完善 404.html",
+            "更改網站標題",
+            "修復 body 在不同手機滾動條問題",
+            "新增 PurgeCSS",
+            "將 router js 的標題跟 app.js 合併",
+            "新增頁面切換動畫",
+            "更改更新日誌迴圈key",
+            "修復作品集按鈕RWD",
+            "主頁社交按鈕改為新視窗分頁"
+        ]
+    },
+    {
         "version": "1.5",
         "description": "建構專案",
         "date": "2022/12/22",
